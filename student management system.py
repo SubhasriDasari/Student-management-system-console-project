@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 25 09:57:59 2025
 
-@author: subhasri
-"""
 
 import csv
 import os
