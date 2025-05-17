@@ -33,14 +33,14 @@ def add_student(students):
     student = {"Roll": roll, "Name": name, "Course": course, "Marks": marks}
     students.append(student)
     save_students(students)
-    print("✅ Student added and saved.\n")
+    print(" Student added and saved.\n")
 
 # Display all students
 def display_students(students):
     if not students:
-        print("⚠️ No student records found.\n")
+        print("No student records found.\n")
         return
-    print("🎓 Student Records:")
+    print(" Student Records:")
     for student in students:
         print(student)
 
@@ -49,9 +49,9 @@ def search_student(students):
     roll = input("Enter Roll Number to search: ")
     for student in students:
         if student["Roll"] == roll:
-            print("🎯 Student Found:", student)
+            print(" Student Found:", student)
             return
-    print("❌ Student not found.\n")
+    print(" Student not found.\n")
 
 # Update student info
 def update_student(students):
@@ -62,9 +62,9 @@ def update_student(students):
             student["Course"] = input("Enter new course: ")
             student["Marks"] = input("Enter new marks: ")
             save_students(students)
-            print("✅ Student updated and saved.\n")
+            print(" Student updated and saved.\n")
             return
-    print("❌ Student not found.\n")
+    print("Student not found.\n")
 
 # Delete student
 def delete_student(students):
@@ -75,13 +75,13 @@ def delete_student(students):
             save_students(students)
             print("🗑️ Student deleted and file updated.\n")
             return
-    print("❌ Student not found.\n")
+    print(" Student not found.\n")
 
 # Main menu
 def main():
     students = load_students()
     while True:
-        print("\n🎓 STUDENT MANAGEMENT SYSTEM")
+        print("\n STUDENT MANAGEMENT SYSTEM")
         print("1. Add Student")
         print("2. Display Students")
         print("3. Search Student")
@@ -102,10 +102,10 @@ def main():
         elif choice == '5':
             delete_student(students)
         elif choice == '6':
-            print("👋 Exiting program. Goodbye!")
+            print(" Exiting program. Goodbye!")
             break
         else:
-            print("⚠️ Invalid choice. Please try again.\n")
+            print("Invalid choice. Please try again.\n")
 
 # Run the program
 main()
